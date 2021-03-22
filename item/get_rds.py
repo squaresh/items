@@ -4,7 +4,7 @@ from aliyunsdkcore.acs_exception.exceptions import ServerException
 from aliyunsdkrds.request.v20140815.DescribeDBInstancesRequest import DescribeDBInstancesRequest
 import json
 
-client = AcsClient('LTAI4GDDng9o1Jcr7NXMyR75', 'esCq8FBLqFVky0EupSp1Abr9MUycaH', 'cn-hangzhou')
+client = AcsClient('', '', 'cn-hangzhou')
 
 request = DescribeDBInstancesRequest()
 request.set_accept_format('json')

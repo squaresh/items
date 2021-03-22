@@ -19,7 +19,7 @@ sheet['A1']='Topic'
 sheet['B1']='GroupId'
 sheet['C1']='描述'
 
-client = AcsClient('LTAI4GDDng9o1Jcr7NXMyR75', 'esCq8FBLqFVky0EupSp1Abr9MUycaH', 'mq-internet-access')
+client = AcsClient('', '', 'mq-internet-access')
 def OnsTopicList():
     request = OnsTopicListRequest()
     request.set_accept_format('json')

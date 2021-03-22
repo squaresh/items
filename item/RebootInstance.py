@@ -7,7 +7,7 @@ from aliyunsdkcore.acs_exception.exceptions import ClientException
 from aliyunsdkcore.acs_exception.exceptions import ServerException
 from aliyunsdkecs.request.v20140526.RebootInstanceRequest import RebootInstanceRequest
 def RebootInstance(id):
-    client = AcsClient('LTAI4GJDpDmE4deuNfabu2ao', 'tfhMwTCCZpZswkRw8IIo2wcbZH1AGX', 'cn-hangzhou')
+    client = AcsClient('', '', 'cn-hangzhou')
 
     request = RebootInstanceRequest()
     request.set_accept_format('json')

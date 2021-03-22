@@ -27,9 +27,9 @@ class Sample:
         """
         config = open_api_models.Config(
             # 您的AccessKey ID,
-            access_key_id='LTAI4GDDng9o1Jcr7NXMyR75',
+            access_key_id='',
             # 您的AccessKey Secret,
-            access_key_secret='esCq8FBLqFVky0EupSp1Abr9MUycaH'
+            access_key_secret=''
         )
         # 访问的域名
         config.endpoint = 'ecs-cn-hangzhou.aliyuncs.com'

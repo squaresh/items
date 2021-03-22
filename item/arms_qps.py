@@ -16,7 +16,7 @@ import datetime,time,os
 path =os.getcwd()
 abs_path=os.path.join(path,'txt/appid.ini')
 print(abs_path)
-client = AcsClient('LTAI4GDDng9o1Jcr7NXMyR75', 'esCq8FBLqFVky0EupSp1Abr9MUycaH', 'cn-shanghai')
+client = AcsClient('=', '=', 'cn-shanghai')
 def QueryMetricByPage(StartTime,Endtime,IntervalInSec,appname,pid):
     """
     rams模块

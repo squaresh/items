@@ -6,7 +6,7 @@ from aliyunsdkcore.client import AcsClient
 from aliyunsdkcore.request import CommonRequest
 import json
 import time
-client = AcsClient('VhxL6346jTLT4hfT','MTmxFadIUmFr7cto6Ia4Zpo25za2hI','cn-foshan-gjsw-d01')
+client = AcsClient('','','cn-foshan-gjsw-d01')
 def StartApplication(AppId):
     request = CommonRequest()
     request.set_accept_format('json')

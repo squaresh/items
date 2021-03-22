@@ -9,7 +9,7 @@ import time
 import openpyxl
 from aliyunsdkcore.client import AcsClient
 from aliyunsdkcore.request import CommonRequest
-client = AcsClient('LTAI4GDDng9o1Jcr7NXMyR75', 'esCq8FBLqFVky0EupSp1Abr9MUycaH', 'cn-hangzhou')
+client = AcsClient('', '', 'cn-hangzhou')
 book = openpyxl.Workbook()
 sheet = book.active
 time1=time.strftime('%Y-%m-%d',time.localtime())

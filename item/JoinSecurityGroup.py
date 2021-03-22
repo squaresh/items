@@ -9,7 +9,7 @@ from aliyunsdkecs.request.v20140526.JoinSecurityGroupRequest import JoinSecurity
 SecurityGroup_Id=['sg-bp1a7lba05nxpkhxiha6']
 Instance_Id=['i-bp10wl8w02ofh7chbcal']
 def JoinSecurityGroup(Sid,Iid):
-    client = AcsClient('LTAI4GJDpDmE4deuNfabu2ao', 'tfhMwTCCZpZswkRw8IIo2wcbZH1AGX', 'cn-hangzhou')
+    client = AcsClient('', '', 'cn-hangzhou')
 
     request = JoinSecurityGroupRequest()
     request.set_accept_format('json')

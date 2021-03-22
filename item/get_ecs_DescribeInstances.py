@@ -20,7 +20,7 @@ sheet['B1'] = 'HostName'
 sheet['C1'] = 'InstanceId'
 now_time = time.strftime('%Y-%m-%d', time.localtime())
 row_id = 1
-client = AcsClient('LTAI4GDDng9o1Jcr7NXMyR75', 'esCq8FBLqFVky0EupSp1Abr9MUycaH', 'cn-hangzhou')
+client = AcsClient('', '', 'cn-hangzhou')
 
 
 def InstancesRequest(num):

@@ -17,7 +17,7 @@ import json, time
 
 now_time = time.strftime('%Y-%m-%d,%X', time.localtime())
 
-client = AcsClient('LTAI4GDDng9o1Jcr7NXMyR75', 'esCq8FBLqFVky0EupSp1Abr9MUycaH', 'cn-hangzhou')
+client = AcsClient('', '', 'cn-hangzhou')
 
 id_num=0
 def InstancesRequest(num, Name):
