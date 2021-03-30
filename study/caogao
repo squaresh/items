@@ -1,0 +1,78 @@
+写execl
+book=openpyxl.workbook
+sheet=book.active 获取操作权限
+
+
+读execl 写(已存在的execl) 方法一样
+book=openpyxl.load_workbook('execl名字')
+book.creat_sheet('execl名字')  ###创建execl页
+sheet=book['sheet名字'] ##获取对某页的操作权限
+id=sheet.cell(row='',colum='').value  ####获取数据
+sheet.cell(row='',colum'').value='gggg' ###写入数据
+sheet['H1':'H20'] 遍历某一列 记住返回是元组形式返回的
+
+book.save('execl名字')
+###
+pymsql
+insert 语句 条件可以用可以同时执行多条语句配合executemany使用
+fetchmany() 指定返回多少行数据fetchmany(5) 指定返回5行 和limit相似
+fetchone() 返回一行数据
+fetchall() 返回所有满足sql的语句(以元组的形式返回) 一般要用for循环打印
+
+####
+#####
+看你导入的模块 如果你整个模块都导入那么你去引用里面的函数就需要加上模块名  例如：import openpyxl
+如果你只导入了模块里你需要的部分函数 那么调用里面的函数就不需要加模块名 例如:from openpyxl import load.Workbook
+记住去调用别的模块都是是去调用里面的函数 在函数中要有括号 Workbook()
+只要在for in 循环的就是可以迭代的（字符串，列表） 所以说整型是不可迭代的
+###
+元组：当元组里只有一个元素的时候必须加,不然就相当于没加()如：(1,)('hello',)
+字符串没有用下标替换字符的方法(列表和字典(key值)可以)，字符串可以用repalce替换，或这写一个循环
+isdigit(),判断是否是数字 ----isalpha(),判断是否是字母----isinstance(变量,类型关键字),判断是否是什么类型
+##
+使用re模块需要先写好一个表达式，然后通过re对应的函数去匹配一般是 函数(表达式,匹配对象)
+
+【列表和元组可以转成字典只要满足成对出现
+如：[[11,'gg'],[22,'gg'],[33,'ff']]  [(11,'gg'),(22,'gg'),(33,'ff')]  ((11,'gg'),(22,'gg'),(33,'ff')) zip()函数能实现此格式
+这类型等价于字典items类型】 就可以for i,a in 赋两个变量的值相当于(key,value)   拓展 dict.fromkeys()(实质就相当于转成字典表达式)
+可实现不满足格式的列表，字符串，元组转字典可以自己统一设置values值】
+
+raise ValueError 自定义一个异常当满足这个配合if 使用的话满足这个条件就当异常处理
+###
+sys和os模块的区别 (sys主要用于系统和变量 os主要是对文件和文件夹做操作)
+sys.path.append的使用
+这是追加一个新的模块识别路径 ###只是追加识别模块路径 不会实质性的改变工作路径
+sys.path是python的搜索模块的路径集，是一个list
+path1=os.path.abspath(__file__) 当前文件的绝对路径
+path2=os.path.dirname(os.path.abspath(__file__)) 当前文件的上一层目录的绝对路径
+path3=os.path.dirname(path2) 当前文件的上上一层目录的绝对路径
+sys.path.append(base_dir)  ##新增此文件的上上级目录为模块识别路径
+
+
+切换到新的路径
+os.chdir(path) ###改变工作路径
+print(f'{a}{b}') ##f可以直接引用变量 就不用占位符或者.format
+print(r'dsa')  ###r是无视转义字符\
+###### __init__的作用
+class Person():
+   def __init__(self, a, b):####定义属性 传参就可以直接在类名（）里传参 全部函数都适用 若没定就只能到指定函数传参
+       self.a = a
+       self.b = b
+    def cs(self,c):
+        return self.a+self.b+c
+ bb=Person(9,8) ###a,b已经初始化定义所以直接在类里传
+bb.cs(10)  ###c没有初始化定义所以只能单独在函数里传
+##### 变量的匹配规则由小到大 先局部再全局，再局部没有找到就找全局的，函数如果你没有给他传变量就在这样找(global)，传了变量就是你传的变量(传到就是局部)
+装饰器：满足闭包原则
+原理：
+1.函数A作为参数出现（函数B就接收函数A作为参数）
+2.装饰器装饰函数（让函数更加丰满）
+@装饰器 作用实现不改名函数名充实函数，定义了装饰器后后面，调用此函数都是返回装饰后的内容，如果你要覆盖的话就在重新定义一遍此函数
+方法：
+@装饰器 @zsq (已经写好了装饰器) ##加了@就相当于执行了装饰器并且把下面的函数当成参数给装饰器
+函数   test()  有参数就加参数(那么装饰器内部定义的那个对应函数也要加参数)——*args可变参数，再装饰器中的函数中定义*args(在装饰器变量很好用),表示可变参数(值争对同一接受值)
+       函数类容
+调用函数 text()
+可变参数对函数里在调用函数(类似装饰器很有用)*，**
+
+#####
